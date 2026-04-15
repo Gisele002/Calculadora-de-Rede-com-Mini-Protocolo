@@ -46,6 +46,7 @@ Calculadora-de-Rede-com-WebSocket/
 
 ### 1. Iniciar o Servidor
 ```bash
+cd "Calculadora-de-Rede-com-Mini-Protocolo"
 cd "hello-sockets-server"
 npm install
 npm run build
@@ -55,6 +56,7 @@ Servidor executa na **porta 7001**.
 
 ### 2. Iniciar o Cliente
 ```bash
+cd "Calculadora-de-Rede-com-Mini-Protocolo"
 cd "hello-sockets-client"
 npm install
 npm start
