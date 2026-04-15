@@ -1,118 +1,118 @@
-# ⚡ WebSocket Calculator Pro
+# ⚡ Calculadora de Rede com WebSocket
 
-**Modern WebSocket Calculator with Real-time Communication**
+**Calculadora WebSocket Moderna com Comunicação em Tempo Real**
 
-## 🎯 Overview
+## 🎯 Visão Geral
 
-A redesigned, modern WebSocket-based calculator featuring a sleek dark theme interface with real-time communication between client and server. This project demonstrates WebSocket protocol implementation with TypeScript.
+Uma calculadora moderna baseada em WebSocket com interface elegante e comunicação em tempo real entre cliente e servidor. Este projeto demonstra a implementação do protocolo WebSocket com TypeScript para aplicações acadêmicas.
 
-## ✨ Features
+## ✨ Funcionalidades
 
-- **Modern UI**: Dark theme with gradient backgrounds and glassmorphism effects
-- **Real-time Communication**: WebSocket-based bidirectional communication
-- **Visual Operation Selection**: Clickable operation buttons instead of dropdown
-- **Live Result Display**: Dedicated result panel with large font
-- **Connection Status**: Real-time connection status badge
-- **Communication Log**: Detailed log of all WebSocket messages
-- **Error Handling**: Comprehensive error handling for division by zero, invalid operations, and malformed messages
+- **Interface Moderna**: Tema escuro com gradientes e efeitos visuais
+- **Comunicação em Tempo Real**: Comunicação bidirecional baseada em WebSocket
+- **Seleção Visual de Operações**: Botões clicáveis ao invés de dropdown
+- **Exibição de Resultado ao Vivo**: Painel dedicado com fonte grande
+- **Status de Conexão**: Badge de status de conexão em tempo real
+- **Log de Comunicação**: Log detalhado de todas as mensagens WebSocket
+- **Tratamento de Erros**: Tratamento abrangente para divisão por zero, operações inválidas e mensagens malformadas
 
-## �️ Tech Stack
+## 🛠️ Stack Tecnológica
 
 - **Frontend**: TypeScript, HTML5, CSS3 (Flexbox/Grid), WebSocket API
-- **Backend**: Node.js, TypeScript, WebSocket (ws library)
-- **Build Tools**: Parcel (client), TypeScript Compiler (server)
-- **Styling**: Modern CSS with gradients, animations, and responsive design
+- **Backend**: Node.js, TypeScript, WebSocket (biblioteca ws)
+- **Ferramentas de Build**: Parcel (cliente), TypeScript Compiler (servidor)
+- **Estilização**: CSS moderno com gradientes, animações e design responsivo
 
-## � Project Structure
+## 📁 Estrutura do Projeto
 
 ```
-WebSocket-Calculator-Pro/
-├── hello-sockets-server/         # WebSocket Server
+Calculadora-de-Rede-com-WebSocket/
+├── hello-sockets-server/         # Servidor WebSocket
 │   ├── src/
-│   │   └── server.ts            # Server implementation
-│   ├── dist/                    # Compiled JavaScript
+│   │   └── server.ts            # Implementação do servidor
+│   ├── dist/                    # JavaScript compilado
 │   └── package.json
 │
-├── hello-sockets-client/        # Web Client
+├── hello-sockets-client/        # Cliente Web
 │   ├── src/
-│   │   ├── index.html           # Modern HTML interface
-│   │   └── client.ts            # Client-side WebSocket logic
+│   │   ├── index.html           # Interface HTML moderna
+│   │   └── client.ts            # Lógica WebSocket do cliente
 │   └── package.json
 │
-└── README.md                    # This documentation
+└── README.md                    # Esta documentação
 ```
 
-## � Quick Start
+## 🚀 Início Rápido
 
-### 1. Start the Server
+### 1. Iniciar o Servidor
 ```bash
 cd "hello-sockets-server"
 npm install
 npm run build
 npm start
 ```
-Server runs on **port 7001**.
+Servidor executa na **porta 7001**.
 
-### 2. Start the Client
+### 2. Iniciar o Cliente
 ```bash
 cd "hello-sockets-client"
 npm install
 npm start
 ```
-Client opens at **http://localhost:1234**.
+Cliente abre em **http://localhost:1234**.
 
-## 📡 Communication Protocol
+## 📡 Protocolo de Comunicação
 
-### Request Format (Client → Server)
+### Formato de Requisição (Cliente → Servidor)
 ```
 OPERATION: ADD
 OPERAND1: 5.2
 OPERAND2: 3.8
 ```
 
-### Response Format (Server → Client)
+### Formato de Resposta (Servidor → Cliente)
 ```
 RESULT: 9
 STATUS: OK
-MESSAGE: Operation completed successfully
+MESSAGE: Operação concluída com sucesso
 ```
 
-## � Supported Operations
+## 🧮 Operações Suportadas
 
-| Operation | Symbol | Description |
-|-----------|--------|-------------|
-| **ADD** | ➕ | Addition |
-| **SUB** | ➖ | Subtraction |
-| **MUL** | ✖️ | Multiplication |
-| **DIV** | ➗ | Division |
+| Operação | Símbolo | Descrição |
+|----------|---------|-----------|
+| **ADD** | ➕ | Adição |
+| **SUB** | ➖ | Subtração |
+| **MUL** | ✖️ | Multiplicação |
+| **DIV** | ➗ | Divisão |
 
-## ⚠️ Error Handling
+## ⚠️ Tratamento de Erros
 
-The server handles:
-- **Division by zero** → Returns error with message
-- **Invalid operation** → Returns error with suggestions
-- **Malformed messages** → Returns format error
-- **Connection issues** → Automatic reconnection handling
+O servidor trata:
+- **Divisão por zero** → Retorna erro com mensagem
+- **Operação inválida** → Retorna erro com sugestões
+- **Mensagens malformadas** → Retorna erro de formato
+- **Problemas de conexão** → Tratamento automático de reconexão
 
-## 🎨 UI Features
+## 🎨 Recursos da Interface
 
-1. **Operation Selection**: Visual buttons instead of dropdown
-2. **Live Status**: Connection status badge (🟢 Connected / 🔴 Disconnected)
-3. **Result Display**: Large, centered result panel
-4. **Communication Log**: Scrollable log with timestamp-like formatting
-5. **Responsive Design**: Works on desktop and mobile
-6. **Animations**: Smooth transitions and hover effects
+1. **Seleção de Operações**: Botões visuais ao invés de dropdown
+2. **Status ao Vivo**: Badge de status de conexão (🟢 Conectado / 🔴 Desconectado)
+3. **Exibição de Resultado**: Painel grande e centralizado para resultados
+4. **Log de Comunicação**: Log rolável com formatação tipo timestamp
+5. **Design Responsivo**: Funciona em desktop e mobile
+6. **Animações**: Transições suaves e efeitos de hover
 
-## 🔌 Connection Management
+## 🔌 Gerenciamento de Conexão
 
-- **Auto-connect**: Client automatically connects on page load
-- **Manual disconnect**: "Disconnect" button sends empty string to server
-- **Reconnection**: Reload page to reconnect after disconnect
+- **Conexão Automática**: Cliente conecta automaticamente ao carregar a página
+- **Desconexão Manual**: Botão "Desconectar" envia string vazia para o servidor
+- **Reconexão**: Recarregue a página para reconectar após desconexão
 
-## 👤 Author
+## 👤 Autor
 
-**Gisele002** - Network Calculator with WebSocket Protocol
+**Gisele002** - Calculadora de Rede com Protocolo WebSocket
 
-## 📄 License
+## 📄 Licença
 
-Open source for educational purposes. Feel free to modify and distribute.
+Código aberto para fins educacionais. Sinta-se livre para modificar e distribuir.
