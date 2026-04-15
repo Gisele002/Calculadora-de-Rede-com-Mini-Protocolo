@@ -1,0 +1,29 @@
+{
+  "name": "calculadora-rede-websocket",
+  "version": "1.0.0",
+  "description": "Calculadora em rede usando WebSocket com mini-protocolo de comunicação",
+  "author": "Gisele002",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Gisele002/Calculadora-de-Rede-com-Mini-Protocolo.git"
+  },
+  "keywords": [
+    "websocket",
+    "calculator",
+    "typescript",
+    "nodejs",
+    "network"
+  ],
+  "scripts": {
+    "install:all": "npm --prefix \"hello-sockets - server\" install && npm --prefix hello-sockets-client install",
+    "build:all": "npm --prefix \"hello-sockets - server\" run build",
+    "start:server": "npm --prefix \"hello-sockets - server\" start",
+    "start:client": "npm --prefix hello-sockets-client start",
+    "start": "concurrently \"npm run start:server\" \"npm run start:client\"",
+    "test": "echo \"Run tests individually in each folder\""
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}

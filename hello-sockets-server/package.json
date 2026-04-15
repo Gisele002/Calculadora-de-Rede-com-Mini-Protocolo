@@ -1,0 +1,28 @@
+{
+  "name": "websocket-calculator-server",
+  "version": "1.0.0",
+  "description": "WebSocket server for network calculator",
+  "author": "Gisele002",
+  "license": "MIT",
+  "main": "dist/server.js",
+  "scripts": {
+    "start": "node ./dist/server.js",
+    "dev": "ts-node src/server.ts",
+    "build": "tsc",
+    "test": "echo \"Run tests with: node test-ws.js\""
+  },
+  "keywords": [
+    "websocket",
+    "calculator",
+    "server",
+    "typescript"
+  ],
+  "devDependencies": {
+    "@types/ws": "^8.18.1",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.8.3"
+  },
+  "dependencies": {
+    "ws": "^8.18.2"
+  }
+}
